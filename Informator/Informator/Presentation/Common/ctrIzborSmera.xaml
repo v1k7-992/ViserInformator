@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Informator.Presentation.Common.ctrIzborSmera"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="285" d:DesignWidth="110" Name="UCProzor">
+    <Grid HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="110">
+        <ScrollViewer Name="svVrednosti" PanningMode="VerticalOnly"  HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Width="280" VerticalScrollBarVisibility="Hidden" >
+            <Grid Name="gdValues" Width="100">             
+            </Grid>     
+        </ScrollViewer>
+        <Label Name="lblSelectedValue" Height="90" Width="90" Background="#FF005DFF"  HorizontalAlignment="Center" HorizontalContentAlignment="Left" VerticalContentAlignment="Bottom" VerticalAlignment="Center" FontSize="40" FontFamily="Calibri" Foreground="White" BorderThickness="3" BorderBrush="#FF005DFF"/>
+    </Grid>
+</UserControl>

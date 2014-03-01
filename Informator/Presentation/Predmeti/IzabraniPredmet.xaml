@@ -1,0 +1,76 @@
+﻿<Page x:Class="Informator.Presentation.Predmeti.IzabraniPredmet"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+     d:DesignWidth="1284.418" d:DesignHeight="721.568" Background="#FF2D3E4E" 
+	Title="IzabraniPredmet">
+
+    <Grid>
+        <Grid x:Name="Heder" VerticalAlignment="Top" HorizontalAlignment="Stretch"  Height="144" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="548*"/>
+
+            </Grid.ColumnDefinitions>
+
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="/Informator;component/Resources/predmeti.png" Grid.ColumnSpan="2" Margin="10,10,0,0" />
+            <Label Grid.Column="2" Content="Страница Предмета" Foreground="white" FontSize="30" VerticalAlignment="top" HorizontalAlignment="Left" Height="45" Width="auto" Margin="10,10,0,0"/>
+            <Label Grid.Column="2" Content="Смер" x:Name="lblSmer" Foreground="white" FontSize="30" VerticalAlignment="top" HorizontalAlignment="Right" Height="57" Width="auto" Margin="0,10,10,0" />
+            <Label Grid.Column="2" Content=" " x:Name="lblPredmet"  Foreground="white" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="70" Width="auto" />
+
+            <Label Grid.Column="2" x:Name="lblGodina"  x:FieldModifier="public" Foreground="white" FontSize="30" VerticalAlignment="top" HorizontalAlignment="Right" Height="57" Width="auto" />
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Height="30" Width="auto" Margin="0,110,0,0" VerticalAlignment="Top"  Grid.ColumnSpan="3"/>
+        </Grid>
+        <ScrollViewer Name="scroll" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="auto" Margin="50,160,50,130" >
+            <Border BorderThickness="1" BorderBrush="White" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,0,0,0" >
+                <Grid x:Name="sadrzaj" VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Foreground="White" x:Name="Cilj" Grid.ColumnSpan="2" Grid.Row="0" FontSize="23" TextAlignment="Justify" HorizontalAlignment="Stretch" Margin="10,5,0,5" >
+                    Циљ предмета
+                    </TextBlock>
+                    <Border Grid.Column="0" Grid.ColumnSpan="3"  Name="Border2"  BorderBrush="White" Grid.Row="0" BorderThickness="0,0,0,1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" />
+                    <Border Grid.ColumnSpan="3"  Name="Border3"  BorderBrush="White" Grid.Row="2" BorderThickness="0,0,0,1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" />
+                    <Border Grid.ColumnSpan="3" BorderBrush="White" Grid.Row="1" BorderThickness="0,0,0,1" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Margin="0,0,0,0" />
+
+                    <TextBlock Foreground="White"  x:Name="Ciljtxt" FontSize="16" Grid.ColumnSpan="2"  Grid.Row="1" Margin="10,5,0,5" Width="auto">
+                    Циљ предмета je оспособљавање студената да разумеју, примењују и управљају поступцима за заштиту података у обалсти рачунарства, комуникација и других пословних системима.<LineBreak/> Студенти треба да буду оспособљени да ураде анализу ризика, и да корисницима система образложе важност примене политике и прописаних поступака заштите.
+                    </TextBlock>
+
+                    <TextBlock Foreground="White" x:Name="Sadrzaj" Grid.Row="2"  FontSize="23" TextAlignment="Justify" HorizontalAlignment="Stretch" Margin="10,15,0,5" >
+                   Садржај предмета:
+                    </TextBlock>
+                    <TextBlock Foreground="White"  x:Name="ishodtxt" Grid.Row="3" FontSize="16" TextAlignment="Justify" HorizontalAlignment="Left" VerticalAlignment="Stretch" Margin="10,5,0,5" Width="800" >
+                    </TextBlock>
+
+
+
+                </Grid> </Border>
+        </ScrollViewer>
+   
+
+
+
+    <Grid Name="Futer" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,5,0">
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch"  Width="auto"  VerticalAlignment="top"/>
+            <Label Grid.Column="0" Content="Profesor" x:Name="lblProfesor"  Foreground="white" FontSize="22" VerticalAlignment="top" HorizontalAlignment="Right" Margin="0,10,0,10" />
+            <Label Grid.Column="0" Content="Sifra Predmeta" x:Name="lblsifra"  Foreground="white" FontSize="22" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,0,10" />
+            <Button Name="btnNazad" Grid.Column="0" Content="Назад" VerticalAlignment="Bottom" Click="btnNazad_Click"  HorizontalAlignment="Left" Width="200" Foreground="White" Background="#396085" Margin="30,20,0,20" BorderThickness="1" BorderBrush="White" FontSize="30" />
+
+        </Grid>
+    </Grid>
+</Page>

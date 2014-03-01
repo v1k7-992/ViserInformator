@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Servis" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_informator" />
+      <xsd:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IVesti_ListaVesti_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaVesti" />
+  </wsdl:message>
+  <wsdl:message name="IVesti_ListaVesti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaVestiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IVesti_PretragaVesti_InputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaVesti" />
+  </wsdl:message>
+  <wsdl:message name="IVesti_PretragaVesti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaVestiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdresar_ListaNastavnogOsoblja_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaNastavnogOsoblja" />
+  </wsdl:message>
+  <wsdl:message name="IAdresar_ListaNastavnogOsoblja_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaNastavnogOsobljaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IAdresar_PretragaNastavnogOsoblja_InputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaNastavnogOsoblja" />
+  </wsdl:message>
+  <wsdl:message name="IAdresar_PretragaNastavnogOsoblja_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaNastavnogOsobljaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IInfoZaUplate_DetaljiUplatioca_InputMessage">
+    <wsdl:part name="parameters" element="tns:DetaljiUplatioca" />
+  </wsdl:message>
+  <wsdl:message name="IInfoZaUplate_DetaljiUplatioca_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DetaljiUplatiocaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnjigaUtisaka_utisci_InputMessage">
+    <wsdl:part name="parameters" element="tns:utisci" />
+  </wsdl:message>
+  <wsdl:message name="IKnjigaUtisaka_utisci_OutputMessage">
+    <wsdl:part name="parameters" element="tns:utisciResponse" />
+  </wsdl:message>
+  <wsdl:message name="IKnjigaUtisaka_postavi_InputMessage">
+    <wsdl:part name="parameters" element="tns:postavi" />
+  </wsdl:message>
+  <wsdl:message name="IKnjigaUtisaka_postavi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:postaviResponse" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_raspored_nastave_InputMessage">
+    <wsdl:part name="parameters" element="tns:raspored_nastave" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_raspored_nastave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:raspored_nastaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_raspored_vezbi_InputMessage">
+    <wsdl:part name="parameters" element="tns:raspored_vezbi" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_raspored_vezbi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:raspored_vezbiResponse" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_u_toku_InputMessage">
+    <wsdl:part name="parameters" element="tns:u_toku" />
+  </wsdl:message>
+  <wsdl:message name="INastavaIvezbe_u_toku_OutputMessage">
+    <wsdl:part name="parameters" element="tns:u_tokuResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPredmeti_ListaPredmeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListaPredmeta" />
+  </wsdl:message>
+  <wsdl:message name="IPredmeti_ListaPredmeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListaPredmetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IPredmeti_PretragaPredmeta_InputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaPredmeta" />
+  </wsdl:message>
+  <wsdl:message name="IPredmeti_PretragaPredmeta_OutputMessage">
+    <wsdl:part name="parameters" element="tns:PretragaPredmetaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRezultatiIspita_filter_InputMessage">
+    <wsdl:part name="parameters" element="tns:filter" />
+  </wsdl:message>
+  <wsdl:message name="IRezultatiIspita_filter_OutputMessage">
+    <wsdl:part name="parameters" element="tns:filterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRezultatiIspita_setRezultat_InputMessage">
+    <wsdl:part name="parameters" element="tns:setRezultat" />
+  </wsdl:message>
+  <wsdl:message name="IRezultatiIspita_setRezultat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:setRezultatResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IVesti">
+    <wsdl:operation name="ListaVesti">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVesti/ListaVesti" message="tns:IVesti_ListaVesti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVesti/ListaVestiResponse" message="tns:IVesti_ListaVesti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PretragaVesti">
+      <wsdl:input wsaw:Action="http://tempuri.org/IVesti/PretragaVesti" message="tns:IVesti_PretragaVesti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IVesti/PretragaVestiResponse" message="tns:IVesti_PretragaVesti_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IAdresar">
+    <wsdl:operation name="ListaNastavnogOsoblja">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdresar/ListaNastavnogOsoblja" message="tns:IAdresar_ListaNastavnogOsoblja_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdresar/ListaNastavnogOsobljaResponse" message="tns:IAdresar_ListaNastavnogOsoblja_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PretragaNastavnogOsoblja">
+      <wsdl:input wsaw:Action="http://tempuri.org/IAdresar/PretragaNastavnogOsoblja" message="tns:IAdresar_PretragaNastavnogOsoblja_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IAdresar/PretragaNastavnogOsobljaResponse" message="tns:IAdresar_PretragaNastavnogOsoblja_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IInfoZaUplate">
+    <wsdl:operation name="DetaljiUplatioca">
+      <wsdl:input wsaw:Action="http://tempuri.org/IInfoZaUplate/DetaljiUplatioca" message="tns:IInfoZaUplate_DetaljiUplatioca_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IInfoZaUplate/DetaljiUplatiocaResponse" message="tns:IInfoZaUplate_DetaljiUplatioca_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IKnjigaUtisaka">
+    <wsdl:operation name="utisci">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKnjigaUtisaka/utisci" message="tns:IKnjigaUtisaka_utisci_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKnjigaUtisaka/utisciResponse" message="tns:IKnjigaUtisaka_utisci_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="postavi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IKnjigaUtisaka/postavi" message="tns:IKnjigaUtisaka_postavi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IKnjigaUtisaka/postaviResponse" message="tns:IKnjigaUtisaka_postavi_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="INastavaIvezbe">
+    <wsdl:operation name="raspored_nastave">
+      <wsdl:input wsaw:Action="http://tempuri.org/INastavaIvezbe/raspored_nastave" message="tns:INastavaIvezbe_raspored_nastave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INastavaIvezbe/raspored_nastaveResponse" message="tns:INastavaIvezbe_raspored_nastave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="raspored_vezbi">
+      <wsdl:input wsaw:Action="http://tempuri.org/INastavaIvezbe/raspored_vezbi" message="tns:INastavaIvezbe_raspored_vezbi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INastavaIvezbe/raspored_vezbiResponse" message="tns:INastavaIvezbe_raspored_vezbi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="u_toku">
+      <wsdl:input wsaw:Action="http://tempuri.org/INastavaIvezbe/u_toku" message="tns:INastavaIvezbe_u_toku_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INastavaIvezbe/u_tokuResponse" message="tns:INastavaIvezbe_u_toku_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IPredmeti">
+    <wsdl:operation name="ListaPredmeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPredmeti/ListaPredmeta" message="tns:IPredmeti_ListaPredmeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPredmeti/ListaPredmetaResponse" message="tns:IPredmeti_ListaPredmeta_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="PretragaPredmeta">
+      <wsdl:input wsaw:Action="http://tempuri.org/IPredmeti/PretragaPredmeta" message="tns:IPredmeti_PretragaPredmeta_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IPredmeti/PretragaPredmetaResponse" message="tns:IPredmeti_PretragaPredmeta_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="IRezultatiIspita">
+    <wsdl:operation name="filter">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRezultatiIspita/filter" message="tns:IRezultatiIspita_filter_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRezultatiIspita/filterResponse" message="tns:IRezultatiIspita_filter_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="setRezultat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRezultatiIspita/setRezultat" message="tns:IRezultatiIspita_setRezultat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRezultatiIspita/setRezultatResponse" message="tns:IRezultatiIspita_setRezultat_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Vesti" type="tns:IVesti">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListaVesti">
+      <soap:operation soapAction="http://tempuri.org/IVesti/ListaVesti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PretragaVesti">
+      <soap:operation soapAction="http://tempuri.org/IVesti/PretragaVesti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar" type="tns:IAdresar">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListaNastavnogOsoblja">
+      <soap:operation soapAction="http://tempuri.org/IAdresar/ListaNastavnogOsoblja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PretragaNastavnogOsoblja">
+      <soap:operation soapAction="http://tempuri.org/IAdresar/PretragaNastavnogOsoblja" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar1" type="tns:IInfoZaUplate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="DetaljiUplatioca">
+      <soap:operation soapAction="http://tempuri.org/IInfoZaUplate/DetaljiUplatioca" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar2" type="tns:IKnjigaUtisaka">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="utisci">
+      <soap:operation soapAction="http://tempuri.org/IKnjigaUtisaka/utisci" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="postavi">
+      <soap:operation soapAction="http://tempuri.org/IKnjigaUtisaka/postavi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar3" type="tns:INastavaIvezbe">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="raspored_nastave">
+      <soap:operation soapAction="http://tempuri.org/INastavaIvezbe/raspored_nastave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="raspored_vezbi">
+      <soap:operation soapAction="http://tempuri.org/INastavaIvezbe/raspored_vezbi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="u_toku">
+      <soap:operation soapAction="http://tempuri.org/INastavaIvezbe/u_toku" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar4" type="tns:IPredmeti">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListaPredmeta">
+      <soap:operation soapAction="http://tempuri.org/IPredmeti/ListaPredmeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PretragaPredmeta">
+      <soap:operation soapAction="http://tempuri.org/IPredmeti/PretragaPredmeta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Adresar5" type="tns:IRezultatiIspita">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="filter">
+      <soap:operation soapAction="http://tempuri.org/IRezultatiIspita/filter" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setRezultat">
+      <soap:operation soapAction="http://tempuri.org/IRezultatiIspita/setRezultat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servis">
+    <wsdl:port name="Vesti" binding="tns:Vesti">
+      <soap:address location="http://localhost:8733/WCF_informator/vesti" />
+    </wsdl:port>
+    <wsdl:port name="Adresar" binding="tns:Adresar">
+      <soap:address location="http://localhost:8733/WCF_informator/adresar" />
+    </wsdl:port>
+    <wsdl:port name="Adresar1" binding="tns:Adresar1">
+      <soap:address location="http://localhost:8733/WCF_informator/info_za_uplate" />
+    </wsdl:port>
+    <wsdl:port name="Adresar2" binding="tns:Adresar2">
+      <soap:address location="http://localhost:8733/WCF_informator/knjiga_utisaka" />
+    </wsdl:port>
+    <wsdl:port name="Adresar3" binding="tns:Adresar3">
+      <soap:address location="http://localhost:8733/WCF_informator/nastava_i_vezbe" />
+    </wsdl:port>
+    <wsdl:port name="Adresar4" binding="tns:Adresar4">
+      <soap:address location="http://localhost:8733/WCF_informator/predmeti" />
+    </wsdl:port>
+    <wsdl:port name="Adresar5" binding="tns:Adresar5">
+      <soap:address location="http://localhost:8733/WCF_informator/rezultati_ispita" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

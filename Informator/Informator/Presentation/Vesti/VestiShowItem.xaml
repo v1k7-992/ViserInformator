@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="Informator.Presentation.Vesti.VestiShowItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="127.612" d:DesignWidth="406.478">
+    <Grid Background="#FF3F637F" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="34*"/>
+            <RowDefinition Height="69*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+        <Grid HorizontalAlignment="Left" Height="34" VerticalAlignment="Top" Width="387" Margin="10,0,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Name="Datum"  Content="Datum" HorizontalAlignment="Left" VerticalAlignment="Top" Width="194" Foreground="White" FontSize="16" Height="34"/>
+            <Label Name="Predmet" Content="Predmet" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="193" Foreground="White" Height="34" FontSize="16"/>
+        </Grid>
+        <Border BorderThickness="0,0,0,2" BorderBrush="#FFD3D1D1" Margin="10,0,10,10" Grid.Row="2" />
+        <TextBlock Name="Naslov" HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Naslov" VerticalAlignment="Top" Height="65" Width="387" Foreground="#FFE6E6E6" FontSize="20" Grid.RowSpan="2"/>
+    </Grid>
+</UserControl>

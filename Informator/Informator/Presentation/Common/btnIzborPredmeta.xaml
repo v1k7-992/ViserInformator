@@ -1,0 +1,15 @@
+﻿<UserControl x:Class="Informator.Presentation.Common.btnIzborPredmeta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="642" Foreground="white"  >
+    <Grid VerticalAlignment="Stretch" >
+        <Button Name="btnPredmeti" BorderThickness="1,1,1,1" BorderBrush="White" HorizontalAlignment="Stretch"  Opacity="0.7" Width="642"  VerticalAlignment="Stretch"  Background="#3F637F"  Foreground="white" ClickMode="Release" Margin="2,0,2,0">
+
+        </Button>
+        <Label x:Name="Text" Content="Text" FontSize="23" HorizontalAlignment="Center" Opacity="1" Foreground="white"   VerticalAlignment="Center"  />
+
+    </Grid>
+</UserControl>

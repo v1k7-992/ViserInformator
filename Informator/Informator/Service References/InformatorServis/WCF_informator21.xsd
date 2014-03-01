@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/WCF_informator" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/WCF_informator" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfVesti">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vesti" nillable="true" type="tns:Vesti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVesti" nillable="true" type="tns:ArrayOfVesti" />
+  <xs:complexType name="Vesti">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="naslov" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="predmet" nillable="true" type="tns:Predmeti" />
+      <xs:element minOccurs="0" name="vaznost" type="xs:boolean" />
+      <xs:element minOccurs="0" name="vest_detalji" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vesti" nillable="true" type="tns:Vesti" />
+  <xs:complexType name="Predmeti">
+    <xs:sequence>
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="NastavnoOsoblje_IDs" nillable="true" type="q1:ArrayOfint" />
+      <xs:element minOccurs="0" name="dalijemaster" type="xs:boolean" />
+      <xs:element minOccurs="0" name="godina" type="xs:int" />
+      <xs:element minOccurs="0" name="naziv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="semestar" type="xs:int" />
+      <xs:element minOccurs="0" name="studije" type="tns:Studije" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Predmeti" nillable="true" type="tns:Predmeti" />
+  <xs:simpleType name="Studije">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Audio_i_video_tehnologije" />
+      <xs:enumeration value="Automatika_i_sistemi_upravljanja_vozila" />
+      <xs:enumeration value="Elektronika_i_telekomunikacije" />
+      <xs:enumeration value="Nove_energetske_tehnologije" />
+      <xs:enumeration value="Elektronsko_poslovanje" />
+      <xs:enumeration value="Nove_racunarske_tehnologije" />
+      <xs:enumeration value="Nove_racunarske_tehnologije_na_daljinu" />
+      <xs:enumeration value="Racunarska_tehnika" />
+      <xs:enumeration value="Spec_nove_racunarske_tehnologije" />
+      <xs:enumeration value="Spec_elektronika_i_telekomunikacije" />
+      <xs:enumeration value="Spec_multimedijalne_tehnologije_i_digitalna_telivizija" />
+      <xs:enumeration value="Spec_nove_energetske_tehnologije" />
+      <xs:enumeration value="Spec_sigurnost_informaciono_komunikacionih_sistema" />
+      <xs:enumeration value="Spec_mehatronika" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Studije" nillable="true" type="tns:Studije" />
+  <xs:complexType name="ArrayOfNastavnoOsoblje">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="NastavnoOsoblje" nillable="true" type="tns:NastavnoOsoblje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNastavnoOsoblje" nillable="true" type="tns:ArrayOfNastavnoOsoblje" />
+  <xs:complexType name="NastavnoOsoblje">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="kabinet" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prezime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vrstaNastavnogOsoblja" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zvanje" type="tns:Zvanje" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="NastavnoOsoblje" nillable="true" type="tns:NastavnoOsoblje" />
+  <xs:simpleType name="Zvanje">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Doktor" />
+      <xs:enumeration value="Magistar" />
+      <xs:enumeration value="Master" />
+      <xs:enumeration value="Inzenjer" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Zvanje" nillable="true" type="tns:Zvanje" />
+  <xs:complexType name="ArrayOfInfoZaUplateDetalji">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InfoZaUplateDetalji" nillable="true" type="tns:InfoZaUplateDetalji" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInfoZaUplateDetalji" nillable="true" type="tns:ArrayOfInfoZaUplateDetalji" />
+  <xs:complexType name="InfoZaUplateDetalji">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="adresa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ime" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="indeks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="prezime" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InfoZaUplateDetalji" nillable="true" type="tns:InfoZaUplateDetalji" />
+  <xs:complexType name="ArrayOfKnjiga_Utisaka">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Knjiga_Utisaka" nillable="true" type="tns:Knjiga_Utisaka" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfKnjiga_Utisaka" nillable="true" type="tns:ArrayOfKnjiga_Utisaka" />
+  <xs:complexType name="Knjiga_Utisaka">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="naslov" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="utisak" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vreme_objave" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Knjiga_Utisaka" nillable="true" type="tns:Knjiga_Utisaka" />
+  <xs:complexType name="ArrayOfNastava_I_Vezbe">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Nastava_I_Vezbe" nillable="true" type="tns:Nastava_I_Vezbe" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfNastava_I_Vezbe" nillable="true" type="tns:ArrayOfNastava_I_Vezbe" />
+  <xs:complexType name="Nastava_I_Vezbe">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="izbor" type="tns:Vrsta" />
+      <xs:element minOccurs="0" name="naziv" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="vreme_pocetka" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="vreme_zavrsetka" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Nastava_I_Vezbe" nillable="true" type="tns:Nastava_I_Vezbe" />
+  <xs:simpleType name="Vrsta">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Nastava" />
+      <xs:enumeration value="Vezbe" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Vrsta" nillable="true" type="tns:Vrsta" />
+  <xs:complexType name="ArrayOfPredmeti">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Predmeti" nillable="true" type="tns:Predmeti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPredmeti" nillable="true" type="tns:ArrayOfPredmeti" />
+  <xs:complexType name="ArrayOfRezultatiIsipita">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="RezultatiIsipita" nillable="true" type="tns:RezultatiIsipita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRezultatiIsipita" nillable="true" type="tns:ArrayOfRezultatiIsipita" />
+  <xs:complexType name="RezultatiIsipita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="datum" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="nastavnik" nillable="true" type="tns:NastavnoOsoblje" />
+      <xs:element minOccurs="0" name="pdf" nillable="true" type="xs:anyURI" />
+      <xs:element minOccurs="0" name="predmet" nillable="true" type="tns:Predmeti" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="RezultatiIsipita" nillable="true" type="tns:RezultatiIsipita" />
+</xs:schema>

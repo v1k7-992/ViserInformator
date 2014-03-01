@@ -1,0 +1,92 @@
+﻿<Page x:Class="Informator.Presentation.Vesti.pgVesti"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      xmlns:b="clr-namespace:Informator.Presentation.Common"
+      xmlns:c="clr-namespace:Informator.Presentation.Vesti"
+      
+      Title="pgVesti" d:DesignHeight="721.568" d:DesignWidth="1200.568"  Background="#FF2D3E4E"
+      >
+    
+
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="15*" />
+            <RowDefinition Height="18*" />
+            <RowDefinition Height="80*" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.Column="0">
+        <Label Content="Вести" FlowDirection="LeftToRight" FontStretch="ExtraExpanded" FontSize="60" Foreground="White"  BorderThickness="0,0,0,1"  Height="80" HorizontalAlignment="Left" Name="lblVesti" VerticalAlignment="Bottom" Width="200"   Margin="129,27,0,0" />
+        </Grid>
+        
+           <Grid Grid.Row="1" Grid.Column="0">
+            <Grid Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Row="1" Grid.Column="1" Name="izdvajamo" Margin="0">
+                    <Label Content="Издвајамо:" FlowDirection="LeftToRight" FontSize="40" Foreground="White"  Height="71" HorizontalAlignment="Left" Name="lblIzdvajamo" VerticalAlignment="Center" Width="300"  />
+
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="3" Name="osnovne" Margin="0">
+                    <Label Content="Основне студије:" FlowDirection="LeftToRight" FontSize="40" Foreground="White"  Height="71" HorizontalAlignment="Left" Name="lblOsnovne" VerticalAlignment="Center" Width="327"  />
+
+                </Grid>
+
+                <Grid Grid.Row="1" Grid.Column="5" Name="spec" Margin="0">
+                    <Label Content="Специјалистичке &#10; студије :" FlowDirection="LeftToRight" FontSize="40" Foreground="White"  Height="120" HorizontalAlignment="Left" Name="lblSpec" VerticalAlignment="Bottom" Width="336"  />
+
+                </Grid>
+
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" Grid.Column="0">
+            <Grid Margin="0,0,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="9*"/>
+                    <ColumnDefinition Width="20*"/>                      
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="5*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Row="2" Grid.Column="1" Name="jedan" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="60*"/>
+                        <RowDefinition Height="20*"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+                <ScrollViewer CanContentScroll="True" Name="OsnovneMask" ScrollViewer.VerticalScrollBarVisibility="Hidden" Grid.Column="3" Margin="10,10,10,10">
+                    <StackPanel Name="Osnovne" Grid.ColumnSpan="3">
+
+                    </StackPanel>
+                </ScrollViewer>
+                <Grid Grid.Row="1" Grid.Column="5" Name="pet" Margin="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="30*"/>
+                        <RowDefinition Height="20*"/>
+                    </Grid.RowDefinitions>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+    
+</Page>

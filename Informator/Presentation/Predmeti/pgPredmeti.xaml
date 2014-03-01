@@ -1,0 +1,383 @@
+﻿<Page x:Class="Informator.Presentation.Predmeti.pgPredmeti"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+       mc:Ignorable="d" Title="Predmeti" d:DesignWidth="1284.418" d:DesignHeight="721.568" Background="#FF2D3E4E">
+
+    <Grid x:Name="Body" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+        <Grid x:Name="Heder" VerticalAlignment="Top" HorizontalAlignment="Stretch" Height="144" Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="548*"/>
+
+            </Grid.ColumnDefinitions>
+            <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="/Informator;component/Resources/predmeti.png" Grid.ColumnSpan="2" Margin="10,10,0,0" />
+            <Label Grid.Column="2" Content="Страница Предмета" Foreground="white" FontSize="30" VerticalAlignment="top" HorizontalAlignment="Left" Height="45" Width="auto" Margin="10,10,0,0"/>
+            <Label Grid.Column="2" x:Name="lblGodina" Content="Прва Година Студија" x:FieldModifier="public" Foreground="white" FontSize="30" VerticalAlignment="top" HorizontalAlignment="Right" Height="57" Width="auto" Margin="0,0,10,0" />
+           
+            <Label Grid.Column="2" Content="Изаберите смер и годину" x:Name="lblNaslov"  Foreground="white" FontSize="40" VerticalAlignment="Bottom" HorizontalAlignment="Center" Height="70" />
+               
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch" Height="30" Width="auto" Margin="0,110,0,0" VerticalAlignment="Top"  Grid.ColumnSpan="3"/>
+        </Grid>
+        <ScrollViewer Name="scroll" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" ScrollViewer.HorizontalScrollBarVisibility="Hidden" ScrollViewer.VerticalScrollBarVisibility="Hidden" Height="auto" Margin="50,160,50,130" >
+        <Grid x:Name="IzborSmera" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" >
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="113*" />
+                <RowDefinition Height="113*" />
+                <RowDefinition Height="113*" />
+                <RowDefinition Height="113*" />
+
+                </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="401*"/>
+                <ColumnDefinition Width="401*"/>
+                <ColumnDefinition Width="401*"/>
+            </Grid.ColumnDefinitions>
+                 
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="NRT" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,-1,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="НРТ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Нове рачунарске технологије"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaNrt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,15,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnNrt1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70"  Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnNrt2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White"   Height="70"   Background="#324f65"  Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnNrt3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"   Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="RT" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="РТ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Рачунарска техника"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaRt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                        <Button x:Name="btnRt1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70"  Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnRt2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65"  Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnRt3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="AVT" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="АВТ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Аудио и видео технологије"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaAvt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnAvt1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnAvt2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnAvt3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="EP" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="1"  >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="ЕП"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Електронско пословање"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaEP" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnEp1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnEp2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65"  Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnEp3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="ELITE" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="ЕЛИТЕ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Електроника и телекоминикације"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaElite" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnЕlite1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnElite2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70" Background="#324f65"  Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnElite3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="ASUV" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="1"  >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="АСУВ"/></TextBlock>
+                            <TextBlock FontSize="20" Foreground="White"   HorizontalAlignment="Center" VerticalAlignment="Center">Аутоматика и системи  управљања возилима</TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaASV" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnAsuv1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnAsuv2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65"  Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnAsuv3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+            <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="0" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="NET" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="НEТ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Нове енергетске технологије"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaNet" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnNet1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnNet2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnNet3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+                <!--
+    Spec.studije
+    -->
+                <!--  <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="1" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="MEH" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="МЕХ"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Мехатроника"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaMeh" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnMeh1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnmeh2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnMeh3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>
+               
+    
+    
+                <Grid VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Row="2" Grid.Column="2" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="81*" />
+                    <RowDefinition Height="81*" />
+                </Grid.RowDefinitions>
+
+                <Border BorderBrush="White" BorderThickness="1,1,1,1" Grid.Row="0" Margin="18" Grid.RowSpan="2" >
+                    <StackPanel x:Name="MTDT" Background="#3F637F"  HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Opacity="0.7" Margin="0,0,0,-1"   Grid.Row="0" >
+                        <TextBlock FontSize="70" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Top"><Run Text="MTDT"/></TextBlock>
+                        <TextBlock FontSize="27" Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center"><Run Text="Multimeialne tehnologije i digitalna televizija"/></TextBlock>
+
+                    </StackPanel>
+
+                </Border>
+
+                <Grid x:Name="NavigacijaMtdt" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Opacity="1" Margin="18,174,18,18" Grid.RowSpan="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                        <ColumnDefinition Width="163*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="btnMtdt1" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1" Height="70" Background="#324f65"  Opacity="0.7" Grid.Column="0"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Bottom"><Run Text="1"/></TextBlock>
+                    </Button>
+
+                    <Button x:Name="btnMtdt2" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Margin="0,0,0,0" Grid.Column="1"  Grid.Row="0" >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="2" /></TextBlock>
+                    </Button>
+                    <Button x:Name="btnMtdt3" HorizontalAlignment="Stretch"  VerticalAlignment="Bottom" BorderBrush="White" BorderThickness="1,1,1,1"  Height="70"  Background="#324f65" Opacity="0.7" Grid.Column="2"  Grid.Row="0"  >
+                        <TextBlock FontSize="30" Foreground="White" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"><Run Text="3"/></TextBlock>
+                    </Button>
+                </Grid>
+            </Grid>-->
+        </Grid>
+            </ScrollViewer>
+        <Grid Name="Futer" VerticalAlignment="Bottom" HorizontalAlignment="Stretch" Height="auto" Margin="0,0,5,0">
+            <Border BorderBrush="White" BorderThickness="0,0,0,1" HorizontalAlignment="Stretch"  Width="auto"  VerticalAlignment="top"/>
+            
+            <Button Name="btnNazad" Grid.Column="0" Content="Назад" VerticalAlignment="Bottom" Click="btnNazad_Click"  HorizontalAlignment="Left" Width="200" Foreground="White" Background="#396085" Margin="30,20,0,20" BorderThickness="1" BorderBrush="White" FontSize="30" />
+            <Button Name="btnTest" Grid.Column="0" Content="Test" VerticalAlignment="Bottom" Click="btnTest_Click"  HorizontalAlignment="Right" Width="200" Foreground="White" Background="#396085" Margin="30,20,0,20" BorderThickness="1" BorderBrush="White" FontSize="30" />
+
+        </Grid>
+    </Grid>
+</Page>

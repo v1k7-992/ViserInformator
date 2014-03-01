@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:8733/WCF_informator?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF_informator" />
+  <xs:element name="ListaVesti">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaVestiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="ListaVestiResult" nillable="true" type="q1:ArrayOfVesti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaVesti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kriterijumZaPretragu" type="xs:boolean" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaVestiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="PretragaVestiResult" nillable="true" type="q2:ArrayOfVesti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaNastavnogOsoblja">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaNastavnogOsobljaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="ListaNastavnogOsobljaResult" nillable="true" type="q3:ArrayOfNastavnoOsoblje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaNastavnogOsoblja">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kriterijumZaPretragu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaNastavnogOsobljaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="PretragaNastavnogOsobljaResult" nillable="true" type="q4:ArrayOfNastavnoOsoblje" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetaljiUplatioca">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="brindeksa" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DetaljiUplatiocaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="DetaljiUplatiocaResult" nillable="true" type="q5:ArrayOfInfoZaUplateDetalji" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="utisci">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="utisciResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="utisciResult" nillable="true" type="q6:ArrayOfKnjiga_Utisaka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postavi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="_naslov" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="_ispovest" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="postaviResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="postaviResult" nillable="true" type="q7:ArrayOfKnjiga_Utisaka" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="raspored_nastave">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zadato_vreme" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="raspored_nastaveResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="raspored_nastaveResult" nillable="true" type="q8:ArrayOfNastava_I_Vezbe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="raspored_vezbi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zadato_vreme" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="raspored_vezbiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="raspored_vezbiResult" nillable="true" type="q9:ArrayOfNastava_I_Vezbe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="u_toku">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zadato_vreme" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="u_tokuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="u_tokuResult" nillable="true" type="q10:ArrayOfNastava_I_Vezbe" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaPredmeta">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListaPredmetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="ListaPredmetaResult" nillable="true" type="q11:ArrayOfPredmeti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaPredmeta">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="kriterijumzapretragu" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="PretragaPredmetaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="PretragaPredmetaResult" nillable="true" type="q12:ArrayOfPredmeti" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filter">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="vreme" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filterResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="filterResult" nillable="true" type="q13:ArrayOfRezultatiIsipita" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setRezultat">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="setRezultatResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/WCF_informator" minOccurs="0" name="setRezultatResult" nillable="true" type="q14:ArrayOfRezultatiIsipita" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

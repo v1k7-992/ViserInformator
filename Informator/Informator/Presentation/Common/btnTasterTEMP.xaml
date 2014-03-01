@@ -1,0 +1,11 @@
+﻿<UserControl x:Class="Informator.Presentation.Common.btnTasterTEMP"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d">
+    <Grid Name="gdMainTast" Background="#303030">
+       
+        <Label x:Name="Slovo" FontFamily="Verdana"  Foreground="White"  HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="32" />
+    </Grid>
+</UserControl>

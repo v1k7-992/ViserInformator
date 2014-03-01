@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="cd5b81bb-695c-420a-8e79-8a66b16c1546"
+  name="Serialization"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="477e78ca-3710-4516-b259-29083f49f880"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DSystem.Runtime.Serialization"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="d3d9e942-94ec-4ef3-b847-fe83263a873f"
+        name="ExtensionDataObject"
+        isAbstract="false"
+        isLeaf="true"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="a1adb47a-72cc-4a03-8f8e-0bc7b846e6cb"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.Runtime.Serialization.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DExtensionDataObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="f3078f58-a1bd-4cd1-b6c0-e4d00b2b29db"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="f3b30dcf-1400-488f-903f-33d982cc51b6">
+                <propertyInstance
+                  Id="c5ae50aa-d72c-4f96-abd3-078076ce3588"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0662bec9-d058-48eb-84ad-b37aab6b0d57">
+                <propertyInstance
+                  Id="9eb305ba-e6ca-404d-84f0-fbd7e3714bb8"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="c615e50b-e999-4021-a034-0555046516d4">
+                <propertyInstance
+                  Id="51db74fa-9df2-4c67-ba8a-da6256edf67f"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="69aaacf0-6bbf-4f8e-a27c-78d0ce5dda94">
+                <propertyInstance
+                  Id="0c673f95-a35c-485d-a1b7-109003971f89"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="45b9a174-48fa-4cfd-8574-b2557bda0f39">
+                <propertyInstance
+                  Id="4b9be336-3680-4763-9259-c5e2acce0d0f"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="d37cc2b0-1ca2-4789-94ae-16026f40a52b"
+        name="IExtensibleDataObject"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="fe3965f7-c3dc-4e0c-a10a-68065d6c90d1"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FProgram Files%2FReference Assemblies%2FMicrosoft%2FFramework%2F.NETFramework%2Fv4.0%2FSystem.Runtime.Serialization.dll&quot; Namespace%3DSystem.Runtime.Serialization Type%3DIExtensibleDataObject"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="95b5c6a2-fb3b-45dd-91c6-734c327f13ae"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bbb2ba43-5b52-4c9f-8e8f-5ded324f76be">
+                <propertyInstance
+                  Id="a2936088-abfd-4866-84c6-63c41669be74"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="bfa3d0c4-0bec-45d4-af7f-af45e2fc7f34">
+                <propertyInstance
+                  Id="4fd74fa6-c450-4f14-aeb3-29f387454fcb"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="93860b4e-5bdd-4627-b64a-ebaa3d8a36a9">
+                <propertyInstance
+                  Id="d67e0467-d4f7-4978-ad32-59a1efcc2314"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="e601b717-983c-4ae2-96a5-fc457fa21e29">
+                <propertyInstance
+                  Id="03334758-5a1f-4f45-b03b-7f84f8abbcee"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

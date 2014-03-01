@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="Informator.Presentation.Common.btnIzborPredmeta"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="642"  Foreground="white"  >
+    <Grid VerticalAlignment="Stretch"  Margin="0,0,0,3" x:Name="dugme" >
+        <Button Name="btnPredmeti" HorizontalAlignment="Stretch"  Opacity="0.8" Width="auto"  VerticalAlignment="Stretch"  Background="#3F637F"  Foreground="white" ClickMode="Release" Margin="2,0,2,0">
+            <Label x:Name="Predmet" Content="Profesor" FontSize="20" HorizontalAlignment="Center"   Opacity="1" Foreground="white"   VerticalAlignment="Center"  />
+        </Button>
+        <Label x:Name="Profesor" Content="Profesor" FontSize="18" HorizontalAlignment="Left" Opacity="1" Foreground="white"   VerticalAlignment="Center" Width="auto" Margin="5,0,0,0" />
+       
+        
+        <Label x:Name="ESPB" Content="ESPB" FontSize="18" HorizontalAlignment="Right"  Opacity="1" Foreground="white"   VerticalAlignment="Center"  />
+
+    </Grid>
+</UserControl>
